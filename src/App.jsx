@@ -8,13 +8,13 @@ import { Route,Routes } from 'react-router-dom'
 import './App.css'
 
 
-
 function App() {
 
+  const [isloggedin, setloggedin]=useState(false)
 
   return (
     <div className="">
-      <Navbar></Navbar>
+      <Navbar isloggedin={isloggedin} setloggedin={setloggedin} ></Navbar>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

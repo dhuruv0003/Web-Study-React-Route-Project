@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router-dom"
 import logo from "../assets/Logo.svg"
+import toast from "react-hot-toast";
+
 
 export default function Navbar(props) {
     let isloggedin = props.isloggedin;
     let setloggedin = props.setloggedin;
     return (
-        <div className="flex gap-5">
+        <div className="mt-2 flex justify-evenly gap-5">
             <Link to="/">
                 <img src={logo} alt="logo" width={160} height={32} loading="lazy" />
             </Link>
@@ -28,15 +30,21 @@ export default function Navbar(props) {
             <div className="flex gap-3">
                 {/* agar login nhi hai to login karo  */}
 
-                {   !isloggedin &&
+                {!isloggedin &&
                     <NavLink to="/login">
-                        <button>Login</button>
+                        <button onClick={() =>
+                        // after login again set isloggedin as false to react to logiut page 
+                        {
+                            setloggedin(false)
+                            toast.success("Logged in")
+                        }
+                        }>Login</button>
                     </NavLink>
                 }
 
                 {/* agar login nhi hai toh signup karo */}
 
-                {   !isloggedin &&
+                {!isloggedin &&
                     <NavLink to="/signup">
                         <button>SignUp</button>
                     </NavLink>

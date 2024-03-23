@@ -17,7 +17,11 @@ function App() {
       <Navbar></Navbar>
 
       <Routes>
-        <Route path='' element=""></Route>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+
       </Routes>
     </div>
   )

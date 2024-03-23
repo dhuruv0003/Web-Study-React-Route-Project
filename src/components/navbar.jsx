@@ -7,9 +7,9 @@ export default function Navbar(props) {
     let isloggedin = props.isloggedin;
     let setloggedin = props.setloggedin;
     return (
-        <div className="mt-2 flex justify-evenly gap-5">
+        <div className="mt-2 flex justify-around gap-5 ">
             <Link to="/">
-                <img src={logo} alt="logo" width={160} height={32} loading="lazy" />
+                <img src={logo} alt="logo" width={160} height={22} loading="lazy" />
             </Link>
             <nav>
                 <ul className="flex gap-3">

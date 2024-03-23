@@ -1,5 +1,5 @@
 export default function Login(){
     return(
-        <div className=""></div>
+        <div className="flex justify-center"></div>
     )
 } 

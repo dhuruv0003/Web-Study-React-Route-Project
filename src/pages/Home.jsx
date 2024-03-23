@@ -1,5 +1,5 @@
 export default function Home(){
     return(
-        <div className="">Hello jee</div>
+        <div className="flex justify-center">Hello jee Welcome Home</div>
     )
 } 

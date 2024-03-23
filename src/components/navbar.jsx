@@ -11,30 +11,46 @@ export default function Navbar(props) {
             </Link>
             <nav>
                 <ul className="flex gap-3">
-                    <li><Link to="/">Home</Link></li>
-                    <li><NavLink to="/">About</NavLink></li>
-                    <li><NavLink to="/">Contact</NavLink></li>
+                    <li>
+                        <NavLink to="/">Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">Contact</NavLink>
+                    </li>
                 </ul>
             </nav>
 
             {/* Creating buttons Login - Signup - LogOut - Dashboard */}
 
             <div className="flex gap-3">
-                {
+                {/* agar login nhi hai to login karo  */}
+
+                {   !isloggedin &&
                     <NavLink to="/login">
                         <button>Login</button>
                     </NavLink>
                 }
-                {
+
+                {/* agar login nhi hai toh signup karo */}
+
+                {   !isloggedin &&
                     <NavLink to="/signup">
                         <button>SignUp</button>
-                    </NavLink>}
+                    </NavLink>
+                }
+                {/* Agar login hai toh logout karo  */}
                 {
+                    isloggedin &&
                     <NavLink to="/">
                         <button>Logout</button>
                     </NavLink>
                 }
+                {/* Agar login hain to main dashboard page par jao  */}
                 {
+                    isloggedin &&
                     <NavLink to="/dashboard">
                         <button>DashBoard</button>
                     </NavLink>

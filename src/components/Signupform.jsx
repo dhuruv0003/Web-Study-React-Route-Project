@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/fa"
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 
 export default function Signupform() {
 
@@ -85,6 +85,11 @@ export default function Signupform() {
                         <span onClick={()=>setshowpassword(prev=>!prev)}>{showpassword?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}</span>
                     </label>
                 </div>
+
+            <button>
+                Create Account
+            </button>
+
             </form>
         </div>
     )

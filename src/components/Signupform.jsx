@@ -77,6 +77,12 @@ export default function Signupform() {
                     </label>
                     <label htmlFor="">
                         <p>Confirm Password</p>
+                        <input type={showpassword?("text"):("password")}
+                        placeholder="Enter password again"
+                        value={formdata.confirmpass}
+                        name="confirmpass"
+                        onChange={changehandler} />
+                        <span onClick={()=>setshowpassword(prev=>!prev)}>{showpassword?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}</span>
                     </label>
                 </div>
             </form>

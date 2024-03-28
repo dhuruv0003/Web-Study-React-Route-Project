@@ -50,7 +50,8 @@ export default function loginform() {
                 </Link>
 
                 <button>
-                    SignIn Button
+                    <Link to="/dashboard">SignIn Button</Link>
+                    
                 </button>
             </label>
 

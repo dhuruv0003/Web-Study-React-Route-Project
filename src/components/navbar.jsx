@@ -4,8 +4,8 @@ import toast from "react-hot-toast";
 
 
 export default function Navbar(props) {
-    let isloggedin = props.isloggedin;
-    let setloggedin = props.setloggedin;
+    const isloggedin = props.isloggedin;
+    const setloggedin = props.setloggedin;
     return (
         <div className="bg-[#003049] flex justify-between items-center w-[100vw]   py-4 px-3 mx-auto">
             <Link to="/">

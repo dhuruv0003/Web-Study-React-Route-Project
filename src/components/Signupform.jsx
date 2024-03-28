@@ -34,7 +34,7 @@ export default function Signupform({ setloggedin }) {
     return (
         <div>
             {/* Student Instructor Tab  */}
-            <div className="">
+            <div className="flex bg-[#a2a2a2] text-[#060d1e] p-2 gap-1 my-6 rounded-full max-w-max">
                 <button>
                     Student
                 </button>
@@ -42,67 +42,75 @@ export default function Signupform({ setloggedin }) {
                     Instructor
                 </button>
             </div>
-            <form onSubmit={submithandler} action="">
+            <form onSubmit={submithandler} action="" className="
+           mt-4 flex flex-col gap-y-3">
                 {/* firstname and lastname container div   */}
-                <div className="">
+                <div className="flex gap-x-4">
 
-                    <label htmlFor="">
-                        <p>
-                            First Name<sup>*</sup>
+                    <label htmlFor="" className="w-full relative">
+                        <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">
+                            First Name<sup className="text-[red]">*</sup>
                         </p>
                         <input
                             type="text" placeholder="Enter Firstname" required onChange={changehandler}
                             name="firstname"
+                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
                             value={formdata.firstname} />
                     </label>
-                    <label htmlFor="">
-                        <p>Last Name<sup>*</sup>
+                    <label className="w-full relative" htmlFor="">
+                    <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">
+                        Last Name<sup className="text-[red]">*</sup>
                         </p>
                         <input type="text"
                             value={formdata.lastname}
                             name="lastname"
                             placeholder="Enter last name"
+                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
                             onChange={changehandler} />
                     </label>
                 </div>
 
                 {/* Email Address */}
 
-                <label htmlFor="">
-                    <p>Email Address</p>
+                <label className="w-full " htmlFor="">
+                <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Email Address</p>
                     <input type="email" onChange={changehandler}
                         value={formdata.email}
                         name="email"
                         placeholder="Enter email address"
+                        className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
                         required />
                 </label>
 
-                <div className="">
-                    <label htmlFor="">
-                        <p>Create Password</p>
+                <div  className="flex
+                gap-x-4">
+                    <label htmlFor="" className="relative w-full">
+                    <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Create Password</p>
                         <input type={showpassword ? ("text") : ("password")}
                             placeholder="Enter Password"
                             name="password"
+                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
                             value={formdata.password} onChange={changehandler}
                         />
-                        <span onClick={() =>
+                        <span className="absolute right-3 top-[40px] cursor-pointer" onClick={() =>
                             setshowpassword(prev => !prev)}>
                             {showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
                         </span>
 
                     </label>
-                    <label htmlFor="">
-                        <p>Confirm Password</p>
+                    <label htmlFor="" className="relative w-full">
+                    <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Confirm Password</p>
                         <input type={showpassword ? ("text") : ("password")}
                             placeholder="Enter password again"
                             value={formdata.confirmpass}
                             name="confirmpass"
+                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
                             onChange={changehandler} />
-                        <span onClick={() => setshowpassword(prev => !prev)}>{showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}</span>
+                        <span className="absolute right-3 top-[38px] cursor-pointer" onClick={() => setshowpassword(prev => !prev)}>{showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}</span>
                     </label>
                 </div>
 
-                <button>
+                <button className="w-full mt-4 bg-[#1f1b00] rounded-[8px] font-medium py-2 text-[#e6e6e6]">
                     Create Account
                 </button>
 

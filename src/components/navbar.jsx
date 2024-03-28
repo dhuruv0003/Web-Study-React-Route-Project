@@ -7,7 +7,7 @@ export default function Navbar(props) {
     let isloggedin = props.isloggedin;
     let setloggedin = props.setloggedin;
     return (
-        <div className="bg-[#003049] flex justify-between items-center    py-4 px-3 mx-auto">
+        <div className="bg-[#003049] flex justify-between items-center w-[100vw]   py-4 px-3 mx-auto">
             <Link to="/">
                 <img src={logo} alt="logo" width={160} height={22} loading="lazy" />
             </Link>

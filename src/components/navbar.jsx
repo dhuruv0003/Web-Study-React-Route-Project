@@ -1,71 +1,71 @@
-import { Link, NavLink } from "react-router-dom"
-import logo from "../assets/Logo.svg"
-import toast from "react-hot-toast";
+import React from "react";
+import logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
+const Navbar = (props) => {
+  const isLoggedIn = props.isLoggedIn;
+  const setIsLoggedIn = props.setIsLoggedIn;
+  return (
+    <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
+      <Link to="/">
+        <img src={logo} height={32} width={160} loading="lazy" />
+      </Link>
 
-export default function Navbar(props) {
-    const isloggedin = props.isloggedin;
-    const setloggedin = props.setloggedin;
-    return (
-        <div className="bg-[#003049] flex justify-between items-center w-[100vw]   py-4 px-3 mx-auto">
-            <Link to="/">
-                <img src={logo} alt="logo" width={160} height={22} loading="lazy" />
-            </Link>
-            <nav>
-                <ul className="text-[#fdf0d5] flex gap-x-6">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+      <nav>
+        <ul className="flex gap-x-6 text-[#003049]">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">About</Link>
+          </li>
+          <li>
+            <Link to="/">Contact</Link>
+          </li>
+        </ul>
+      </nav>
 
-            {/* Creating buttons Login - Signup - LogOut - Dashboard */}
+      {/* Button - Login = Signup = Logout = Dashboard  */}
 
-            <div className="flex gap-x-5 items-center ">
-                {/* agar login nhi hai to login karo  */}
+      <div className="flex items-center gap-x-4 text-[#003049]">
+        {!isLoggedIn && (
+          <Link to="/login">
+            <button className="bg-[#003049] py-[8px] px-[12px] rounded-[8px] border border-[#003049]">
+              Login
+            </button>
+          </Link>
+        )}
+        {!isLoggedIn && (
+          <Link to="/signup">
+            <button className="bg-[#003049] py-[8px] px-[12px] rounded-[8px] border border-[#003049]">
+              Sign Up
+            </button>
+          </Link>
+        )}
+        {isLoggedIn && (
+          <Link to="/">
+            <button
+              onClick={() => {
+                setIsLoggedIn(false);
+                toast.success("Logout Sucessfully");
+              }}
+              className="bg-[#003049] py-[8px] px-[12px] rounded-[8px] border border-[#003049]"
+            >
+              Log Out
+            </button>
+          </Link>
+        )}
+        {isLoggedIn && (
+          <Link to="/dashboard">
+            <button className="bg-[#003049] py-[8px] px-[12px] rounded-[8px] border border-[#003049]">
+              Dashboard
+            </button>
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+};
 
-                {!isloggedin &&
-                    <Link to="/login">
-                        <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black">Login</button>
-                    </Link>
-                }
-
-                {/* agar login nhi hai toh signup karo */}
-
-                {!isloggedin &&
-                    <Link to="/signup">
-                        <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black">SignUp</button>
-                    </Link>
-                }
-                {/* Agar login hai toh logout karo  */}
-                {
-                    isloggedin &&
-                    <Link to="/">
-                        <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black"onClick={() =>
-                        // after login again set isloggedin as false to react to logout page 
-                        { 
-                            setloggedin(false)
-                            toast.success("Logged Out")
-                        }
-                        }>Logout</button>
-                    </Link>
-                }
-                {/* Agar login hain to main dashboard page par jao  */}
-                {
-                    isloggedin &&
-                    <Link to="/dashboard">
-                        <button className=" bg-[#fdf0d5] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] border-[#0e2960] shadow-lg shadow-black">DashBoard</button>
-                    </Link>
-                }
-
-            </div>
-
-        </div>
-    )
-} 
+export default Navbar;

@@ -6,7 +6,7 @@ import {FcGoogle} from "react-icons/fc"
 export default function Template({ title, desc1, desc2, image, formtype, setloggedin }) {
     // this template is created in order to have similar components for both login ansd signup page.  
     return (
-        <div className="flex justify-between w-11/12 mx-auto max-w-[1160px] py-12 gap-x-12 gap-y-8">
+        <div className="flex flex-wrap justify-between w-11/12 mx-auto max-w-[1160px] py-12 gap-x-12 gap-y-0">
             <div className="Left-Section flex-col w-11/12 max-w-[450px]">
                 <h1 className="text-black font-semibold text-[1.875rem] leading-[2.375rem]"
                 >{title}</h1>
@@ -29,7 +29,7 @@ export default function Template({ title, desc1, desc2, image, formtype, setlogg
                     <FcGoogle/>Sign in With Google</button>
             </div>
             <div className="right-section relative w-11/12 max-w-[450px]">
-                <img src={frameimage} alt="pattern image" 
+                <img className="rounded-md" src={frameimage} alt="pattern image" 
                 width={558}
                 height={504}
                 loading="lazy"/>
@@ -37,7 +37,7 @@ export default function Template({ title, desc1, desc2, image, formtype, setlogg
                 width={558}
                 height={490}
                 loading="lazy"
-                className="absolute -top-4 right-4"/>
+                className="rounded-md absolute -top-4 right-4"/>
             </div>
         </div>
     )

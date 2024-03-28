@@ -4,8 +4,8 @@ import toast from "react-hot-toast";
 
 
 export default function Navbar(props) {
-    let isloggedin = props.isloggedin;
-    let setloggedin = props.setloggedin;
+    const isloggedin = props.isloggedin;
+    const setloggedin = props.setloggedin;
     return (
         <div className="mt-2 flex justify-around gap-5 ">
             <Link to="/">
@@ -20,7 +20,7 @@ export default function Navbar(props) {
                         <NavLink to="/">About</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">Contact</NavLink>
+                        <NavLink to="/ ">Contact</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -33,7 +33,7 @@ export default function Navbar(props) {
                 {!isloggedin &&
                     <NavLink to="/login">
                         <button onClick={() =>
-                        // after login again set isloggedin as false to react to logiut page 
+                        // after login again set isloggedin as false to react to logout page 
                         {
                             setloggedin(false)
                             toast.success("Logged in")

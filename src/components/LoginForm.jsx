@@ -49,7 +49,7 @@ export default function LoginForm({setloggedin}) {
                      onChange={changeHandler} />
             </label>
 
-            <label htmlFor="" className="w-full relative">
+            <label className="w-full relative">
                 <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Password <sup className="text-[red]">*</sup></p>
                 <input 
                     type={showpassword ? ("text") : ("password")}

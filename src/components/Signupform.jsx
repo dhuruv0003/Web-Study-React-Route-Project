@@ -47,7 +47,7 @@ export default function Signupform({ setloggedin }) {
                 {/* firstname and lastname container div   */}
                 <div className="flex gap-x-4">
 
-                    <label htmlFor="" className="w-full relative">
+                    <label className="w-full relative">
                         <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">
                             First Name<sup className="text-[red]">*</sup>
                         </p>
@@ -57,7 +57,7 @@ export default function Signupform({ setloggedin }) {
                             className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
                             value={formdata.firstname} />
                     </label>
-                    <label className="w-full relative" htmlFor="">
+                    <label className="w-full relative">
                     <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">
                         Last Name<sup className="text-[red]">*</sup>
                         </p>
@@ -72,7 +72,7 @@ export default function Signupform({ setloggedin }) {
 
                 {/* Email Address */}
 
-                <label className="w-full " htmlFor="">
+                <label className="w-full " >
                 <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Email Address</p>
                     <input type="email" onChange={changehandler}
                         value={formdata.email}
@@ -84,7 +84,7 @@ export default function Signupform({ setloggedin }) {
 
                 <div  className="flex
                 gap-x-4">
-                    <label htmlFor="" className="relative w-full">
+                    <label className="relative w-full">
                     <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Create Password</p>
                         <input type={showpassword ? ("text") : ("password")}
                             placeholder="Enter Password"
@@ -98,7 +98,7 @@ export default function Signupform({ setloggedin }) {
                         </span>
 
                     </label>
-                    <label htmlFor="" className="relative w-full">
+                    <label className="relative w-full">
                     <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Confirm Password</p>
                         <input type={showpassword ? ("text") : ("password")}
                             placeholder="Enter password again"

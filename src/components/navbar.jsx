@@ -14,13 +14,13 @@ export default function Navbar(props) {
             <nav>
                 <ul className="text-[#fdf0d5] flex gap-x-6">
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <NavLink to="/">About</NavLink>
+                        <Link to="/">About</Link>
                     </li>
                     <li>
-                        <NavLink to="/">Contact</NavLink>
+                        <Link to="/">Contact</Link>
                     </li>
                 </ul>
             </nav>
@@ -31,22 +31,22 @@ export default function Navbar(props) {
                 {/* agar login nhi hai to login karo  */}
 
                 {!isloggedin &&
-                    <NavLink to="/login">
+                    <Link to="/login">
                         <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black">Login</button>
-                    </NavLink>
+                    </Link>
                 }
 
                 {/* agar login nhi hai toh signup karo */}
 
                 {!isloggedin &&
-                    <NavLink to="/signup">
+                    <Link to="/signup">
                         <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black">SignUp</button>
-                    </NavLink>
+                    </Link>
                 }
                 {/* Agar login hai toh logout karo  */}
                 {
                     isloggedin &&
-                    <NavLink to="/">
+                    <Link to="/">
                         <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black"onClick={() =>
                         // after login again set isloggedin as false to react to logout page 
                         { 
@@ -54,14 +54,14 @@ export default function Navbar(props) {
                             toast.success("Logged Out")
                         }
                         }>Logout</button>
-                    </NavLink>
+                    </Link>
                 }
                 {/* Agar login hain to main dashboard page par jao  */}
                 {
                     isloggedin &&
-                    <NavLink to="/dashboard">
+                    <Link to="/dashboard">
                         <button className=" bg-[#fdf0d5] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] border-[#0e2960] shadow-lg shadow-black">DashBoard</button>
-                    </NavLink>
+                    </Link>
                 }
 
             </div>

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="w-screen h-screen overflow-hidden bg-[#fdf0d5]">
-      <Navbar isloggedin={isloggedin} setloggedin={setloggedin} ></Navbar>
+      <Navbar isloggedin={isloggedin} setloggedin={setloggedin}/>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

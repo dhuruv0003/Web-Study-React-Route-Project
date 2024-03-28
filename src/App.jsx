@@ -13,14 +13,14 @@ function App() {
   const [isloggedin, setloggedin] = useState(false)
 
   return (
-    <div className="">
+    <div className="w[100vw] h-[100vh] bg-[#fdf0d5]">
       <Navbar isloggedin={isloggedin} setloggedin={setloggedin} ></Navbar>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
 
         <Route path='/login' element={<Login isloggedin={isloggedin} setloggedin={setloggedin}></Login>}></Route>
-        
+
         <Route path='/signup' element={<Signup isloggedin={isloggedin} setloggedin={setloggedin}></Signup>}></Route>
         <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
 

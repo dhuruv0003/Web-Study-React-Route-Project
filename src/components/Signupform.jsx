@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/fa"
 
 export default function Signupform() {
 
@@ -7,8 +8,17 @@ export default function Signupform() {
         email: "", password: "", confirmpass: ""
     })
 
+    function changehandler(event){
+        setformdata((prevdata)=>({
+            ...prevdata,
+            [event.target.name]:event.target.value
+        }))
+    }
+
+    const [showpassword,setshowpassword]=useState(false);
+
     return (
-        <div className="">
+        <div>
             {/* Student Instructor Tab  */}
             <div className="">
                 <button>
@@ -48,8 +58,24 @@ export default function Signupform() {
                     <p>Email Address</p>
                     <input type="email" onChange={changehandler}
                     value={formdata.email}
-                    placeholder="Enter email address" />
+                    placeholder="Enter email address"
+                    required />
                 </label>
+
+                <div className="">
+                    <label htmlFor="">
+                        <p>Create Password</p>
+                        <input type={showpassword?("text"):("password")}
+                        placeholder="Enter Password" name="password"
+                        value={formdata.password} onChange={changehandler} 
+                        />
+                        <span onClick={(prev)=>setshowpassword(!prev)}>{showpassword?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}</span>
+
+                    </label>
+                    <label htmlFor="">
+                        <p>Confirm Password</p>
+                    </label>
+                </div>
             </form>
         </div>
     )

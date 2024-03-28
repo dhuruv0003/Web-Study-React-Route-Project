@@ -69,7 +69,10 @@ export default function Signupform() {
                         placeholder="Enter Password" name="password"
                         value={formdata.password} onChange={changehandler} 
                         />
-                        <span onClick={(prev)=>setshowpassword(!prev)}>{showpassword?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}</span>
+                        <span onClick={()=>
+                            setshowpassword(prev=>!prev)}>
+                                {showpassword?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
+                        </span>
 
                     </label>
                     <label htmlFor="">

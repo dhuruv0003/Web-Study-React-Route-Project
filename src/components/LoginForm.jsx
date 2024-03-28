@@ -41,7 +41,8 @@ export default function loginform() {
 
                 <span
             // Jaise hi eye par click kere password visible ho jaye and eye par slash aa jaye, and vice versa for next click
-                    onClick={(prev) => { setshowpassword(!prev) }}>{showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+                    onClick={() =>
+                     setshowpassword((prev)=>(!prev))} >{showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
                 </span>
                 
                 <Link to="#">

@@ -1,10 +1,14 @@
 import { useState } from "react"
 import toast from "react-hot-toast"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 export default function LoginForm({setloggedin}) {
+
+    // now after login if we want to redirect on dashboard we will use useNavigate()
+
+    const navigate=useNavigate();
 
     const [formData, setFormData] = useState({
         email: "", password: ""
@@ -26,6 +30,7 @@ export default function LoginForm({setloggedin}) {
         //jaise hi login pr click krege isloggeding ko true banadena i.e
         setloggedin(true);
         toast.success("Logged in")
+        navigate("/dashboard")
     }
 
     return (

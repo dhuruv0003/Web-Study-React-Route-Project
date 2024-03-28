@@ -28,7 +28,7 @@ export default function Signupform({setloggedin}) {
                     Instructor
                 </button>
             </div>
-            <form action="">
+            <form  action="">
             {/* firstname and lastname container div   */}
                 <div className="">
                     

@@ -9,7 +9,7 @@ export default function Signup({setloggedin}){
             desc1="Build skills for Today, tomorrow, and beyond."
             desc2="Education to future-proof your career."
             image={singupimg}
-            formtype="login"
+            formtype="signup"
             setloggedin={setloggedin}
         />
     )

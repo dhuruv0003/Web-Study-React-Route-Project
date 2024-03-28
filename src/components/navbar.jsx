@@ -51,7 +51,7 @@ export default function Navbar(props) {
                         // after login again set isloggedin as false to react to logout page 
                         {
                             setloggedin(false)
-                            toast.success("Logged in")
+                            toast.success("Logged Out")
                         }
                         }>Logout</button>
                     </NavLink>

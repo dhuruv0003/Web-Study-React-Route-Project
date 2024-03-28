@@ -13,7 +13,7 @@ export default function Template({ title, desc1, desc2, image, formtype, setlogg
                     <span>{desc2}</span>
                 </p>
                 {
-                    formtype === "signup" ? (<Signupform />) : (<LoginForm />)
+                    formtype === "signup" ? (<Signupform  setloggedin={setloggedin}/>) : (<LoginForm />)
                 }
 
                 <div className="">

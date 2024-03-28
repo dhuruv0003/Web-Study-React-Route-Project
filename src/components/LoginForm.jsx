@@ -1,8 +1,10 @@
 import { useState } from "react"
+import toast from "react-hot-toast"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
-export default function loginform() {
+
+export default function LoginForm({setloggedin}) {
 
     const [formData, setFormData] = useState({
         email: "", password: ""
@@ -19,20 +21,32 @@ export default function loginform() {
         )
     }
 
+    function submithandler(event){
+        event.preventDefault();
+        //jaise hi login pr click krege isloggeding ko true banadena i.e
+        setloggedin(true);
+        toast.success("Logged in")
+    }
+
     return (
-        <form action="">
+        <form onSubmit={submithandler} action="">
             <label htmlFor="">
                 <p>
                     Email Address <sup>*</sup>
                 </p>
                 <input
-                    placeholder="Enter Emial id" type="email" required value={formData.email}
-                    name="email" onChange={changeHandler} />
+                     placeholder="Enter Emial id"
+                     type="email"
+                     required 
+                     value={formData.email}
+                     name="email"
+                     onChange={changeHandler} />
             </label>
 
             <label htmlFor="">
                 <p>Password <sup>*</sup></p>
-                <input type={showpassword ? ("text") : ("password")}
+                <input 
+                    type={showpassword ? ("text") : ("password")}
                     placeholder="Enter Password"
                     name="password"
                     onChange={changeHandler}
@@ -50,8 +64,7 @@ export default function loginform() {
                 </Link>
 
                 <button>
-                    <Link to="/dashboard">SignIn Button</Link>
-                    
+                    SignIn Button
                 </button>
             </label>
 

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 
-export default function Signupform() {
+export default function Signupform({setloggedin}) {
 
     const [formdata, setformdata] = useState({
         firstname: "", lastname: "",

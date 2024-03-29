@@ -40,7 +40,7 @@ export default function LoginForm({setloggedin}) {
                     Email Address <sup className="text-[red]">*</sup>
                 </p>
                 <input
-                    className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[12px]"
+                    className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[12px] placeholder:text-black"
                      placeholder="Enter Email id"
                      type="email"
                      required 
@@ -57,7 +57,7 @@ export default function LoginForm({setloggedin}) {
                     name="password"
                     onChange={changeHandler}
                     value={formData.password}
-                    className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[12px]"
+                    className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[12px] placeholder:text-black"
                     required />
 
                 <span className="absolute right-3 top-[40px] cursor-pointer"

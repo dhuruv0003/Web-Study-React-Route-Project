@@ -37,10 +37,10 @@ export default function Signupform({ setloggedin }) {
         <div>
             {/* Student Instructor Tab  */}
             <div className="flex bg-[#a2a2a2] text-[#060d1e] p-2 gap-1 my-6 rounded-full max-w-max">
-                <button onClick={()=>setaccounttype("student")}>
+                <button className={`${accounttype==="student"?"bg-black text-white":"bg-transparent text-black"} py-2 px-5 rounded-full transition-all duration-200`} onClick={()=>setaccounttype("student")}>
                     Student
                 </button>
-                <button onClick={()=>setaccounttype("instuctor")}>
+                <button className={`${accounttype==="instructor"?"bg-black text-white":"bg-transparent text-black"} py-2 px-5 rounded-full transition-all duration-200`} onClick={()=>setaccounttype("instructor")}>
                     Instructor
                 </button>
             </div>

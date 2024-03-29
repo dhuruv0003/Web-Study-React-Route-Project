@@ -26,7 +26,7 @@ export default function Navbar(props) {
 
             {/* Creating buttons Login - Signup - LogOut - Dashboard */}
 
-            <div className="flex gap-x-5 items-center ">
+            <div className="flex gap-x-5 pr-5 items-center ">
                 {/* agar login nhi hai to login karo  */}
 
                 {!isloggedin &&

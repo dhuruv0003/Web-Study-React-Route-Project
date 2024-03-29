@@ -13,7 +13,7 @@ function App() {
   const [isloggedin, setloggedin] = useState(false)
 
   return (
-    <div className="w-screen h-screen overflow-hidden bg-[#fdf0d5]">
+    <div className="w-screen h-screen  bg-[#fdf0d5]">
       <Navbar isloggedin={isloggedin} setloggedin={setloggedin}/>
 
       <Routes>

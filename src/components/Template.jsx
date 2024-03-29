@@ -6,7 +6,7 @@ import {FcGoogle} from "react-icons/fc"
 export default function Template({ title, desc1, desc2, image, formtype, setloggedin }) {
     // this template is created in order to have similar components for both login ansd signup page.  
     return (
-        <div className="flex flex-wrap h-full justify-between w-11/12 mx-auto max-w-[1160px] py-9 gap-x-12 gap-y-0">
+        <div className="flex  h-full justify-between w-11/12 mx-auto max-w-[1160px] py-9 gap-x-12 gap-y-0">
             <div className="Left-Section flex-col w-11/12 max-w-[450px]">
                 <h1 className="text-black font-semibold text-[1.875rem] leading-[2.375rem]"
                 >{title}</h1>

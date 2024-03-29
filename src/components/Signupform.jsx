@@ -54,7 +54,7 @@ export default function Signupform({ setloggedin }) {
                         <input
                             type="text" placeholder="Enter Firstname" required onChange={changehandler}
                             name="firstname"
-                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
+                            className="text-[black] bg-[#f3e9e3] rounded-[0.5rem] w-full p-[9px]"
                             value={formdata.firstname} />
                     </label>
                     <label className="w-full relative">
@@ -65,7 +65,7 @@ export default function Signupform({ setloggedin }) {
                             value={formdata.lastname}
                             name="lastname"
                             placeholder="Enter last name"
-                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
+                            className="text-[black] bg-[#f3e9e3] rounded-[0.5rem] w-full p-[9px]"
                             onChange={changehandler} />
                     </label>
                 </div>
@@ -78,7 +78,7 @@ export default function Signupform({ setloggedin }) {
                         value={formdata.email}
                         name="email"
                         placeholder="Enter email address"
-                        className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
+                        className="text-[black] bg-[#f3e9e3] rounded-[0.5rem] w-full p-[9px]"
                         required />
                 </label>
 
@@ -89,7 +89,7 @@ export default function Signupform({ setloggedin }) {
                         <input type={showpassword ? ("text") : ("password")}
                             placeholder="Enter Password"
                             name="password"
-                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
+                            className="text-[black] bg-[#f3e9e3]  rounded-[0.5rem] w-full p-[9px]"
                             value={formdata.password} onChange={changehandler}
                         />
                         <span className="absolute right-3 top-[40px] cursor-pointer" onClick={() =>
@@ -104,7 +104,7 @@ export default function Signupform({ setloggedin }) {
                             placeholder="Enter password again"
                             value={formdata.confirmpass}
                             name="confirmpass"
-                            className="text-[black] bg-[#e6e6e6] rounded-[0.5rem] w-full p-[9px]"
+                            className="text-[black] bg-[#f3e9e3] rounded-[0.5rem] w-full p-[9px]"
                             onChange={changehandler} />
                         <span className="absolute right-3 top-[38px] cursor-pointer" onClick={() => setshowpassword(prev => !prev)}>{showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}</span>
                     </label>

@@ -28,7 +28,7 @@ export default function Template({ title, desc1, desc2, image, formtype, setlogg
                  <button className="w-full rounded-[8px] font-medium border border-slate-900 px-[12px] py-[8px] gap-x-2 mt-6 flex items-center justify-center">
                     <FcGoogle/>Sign in With Google</button>
             </div>
-            <div className="right-section relative mx-auto w-11/12 max-w-[450px]">
+            <div className="right-section relative transition-all duration-150 mx-auto w-11/12 max-w-[450px]">
                 <img className="rounded-md" src={frameimage} alt="pattern image" 
                 width={558}
                 height={504}

@@ -18,8 +18,10 @@ export default function Signupform({ setloggedin }) {
     }
 
     const [showpassword, setshowpassword] = useState(false);
+    const [accounttype,setaccounttype]=useState("student")
 
-    const navigate=useNavigate()
+
+    const navigate=useNavigate();
 
     function submithandler(event) {
         event.preventDefault();
@@ -35,10 +37,10 @@ export default function Signupform({ setloggedin }) {
         <div>
             {/* Student Instructor Tab  */}
             <div className="flex bg-[#a2a2a2] text-[#060d1e] p-2 gap-1 my-6 rounded-full max-w-max">
-                <button>
+                <button onClick={()=>setaccounttype("student")}>
                     Student
                 </button>
-                <button>
+                <button onClick={()=>setaccounttype("instuctor")}>
                     Instructor
                 </button>
             </div>

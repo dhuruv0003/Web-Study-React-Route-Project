@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom"
 import logo from "../assets/Logo.svg"
 import toast from "react-hot-toast";
 
-
 export default function Navbar(props) {
     const isloggedin = props.isloggedin;
     const setloggedin = props.setloggedin;

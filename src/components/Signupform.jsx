@@ -18,6 +18,7 @@ export default function Signupform({ setloggedin }) {
     }
 
     const [showpassword, setshowpassword] = useState(false);
+    const [showconfirmpass,setconfirmpass]=useState(false)
     const [accounttype,setaccounttype]=useState("student")
 
 
@@ -102,13 +103,13 @@ export default function Signupform({ setloggedin }) {
                     </label>
                     <label className="relative w-full">
                     <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Confirm Password</p>
-                        <input type={showpassword ? ("text") : ("password")}
+                        <input type={showconfirmpass ? ("text") : ("password")}
                             placeholder="Enter password again"
                             value={formdata.confirmpass}
                             name="confirmpass"
                             className="text-[black] bg-[#f3e9e3] rounded-[0.5rem] w-full p-[9px] placeholder:text-black"
                             onChange={changehandler} />
-                        <span className="absolute right-3 top-[38px] cursor-pointer" onClick={() => setshowpassword(prev => !prev)}>{showpassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}</span>
+                        <span className="absolute right-3 top-[38px] cursor-pointer" onClick={() => setconfirmpass(prev => !prev)}>{showconfirmpass ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}</span>
                     </label>
                 </div>
 

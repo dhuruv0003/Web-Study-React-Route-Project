@@ -34,7 +34,7 @@ export default function Navbar(props) {
                         <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black">Login</button>
                     </Link>
                 }
-
+                
                 {/* agar login nhi hai toh signup karo */}
 
                 {!isloggedin &&
@@ -46,7 +46,7 @@ export default function Navbar(props) {
                 {
                     isloggedin &&
                     <Link to="/">
-                        <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black"onClick={() =>
+                        <button className=" bg-[#f9dfac] text-[#103969] py-[8px] px-[12px] rounded-md border-[2px] font-bold border-[#0e2960] shadow-lg shadow-black" onClick={() =>
                         // after login again set isloggedin as false to react to logout page 
                         { 
                             setloggedin(false)
